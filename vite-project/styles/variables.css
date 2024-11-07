@@ -1,0 +1,17 @@
+:root{
+  --slate-blue:#2a475e;
+  --midnight-blue:#1b2838;
+  --steam-black:#171a21;
+  --light-grey:#D3D3D3;
+  --epic-black:#2F2D2E;
+  --white:	#FFFFFF;
+
+  --primary: var(--steam-black);
+  --secondary: var(--midnight-blue);
+
+  --h1: 10rem;
+  --h2: 5.063rem;
+  --h3: 3.375rem;
+  --h4: 2.25rem;
+  --h5: 1.5rem;
+}
