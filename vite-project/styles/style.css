@@ -1,97 +1,63 @@
-:root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
-  font-weight: 400;
-
-  color-scheme: light dark;
-  color: rgba(255, 255, 255, 0.87);
-  background-color: #242424;
-
-  font-synthesis: none;
-  text-rendering: optimizeLegibility;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-a {
-  font-weight: 500;
-  color: #646cff;
-  text-decoration: inherit;
-}
-a:hover {
-  color: #535bf2;
-}
-
-body {
+html,
+body,
+* {
   margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
-  background-color: red;
+  padding: 0;
+  box-sizing: border-box;
+  font-size: 62.5%;
 }
 
-h1 {
-  font-size: 3.2em;
-  line-height: 1.1;
-}
+:root{
+  --slate-blue:#2a475e;
+  --midnight-blue:#1b2838;
+  --steam-black:#171a21;
+  --light-grey:#D3D3D3;
+  --epic-black:#2F2D2E;
+  --white:	#FFFFFF;
 
-#app {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+  --primary: var(--steam-black);
+  --secondary: var(--midnight-blue);
+
+  --h1: 10rem;
+  --h2: 5.063rem;
+  --h3: 3.375rem;
+  --h4: 2.25rem;
+  --h5: 1.5rem;
+}
+.site{
+  background-color:var(--primary);
   text-align: center;
+  color:var(--slate-blue);
 }
-
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+h1 {
+  font-size: var(--h1);
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+body{
+  background-color:var(--secondary);
 }
-.logo.vanilla:hover {
-  filter: drop-shadow(0 0 2em #f7df1eaa);
+#steam{
+  --primary: var(--steam-black);
+  --secondary: var(--midnight-blue);
 }
-
-.card {
-  padding: 2em;
+#epicgames{
+  --primary: var(--epic-black);
+  --secondary: var(--white);
 }
-
-.read-the-docs {
-  color: #888;
+.game{
+  display: block;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  height: 500px;
+  text-align: center;
+  background-color:var(--steam-black);
+  color:var(--light-grey);
+  font-size: 3rem;
 }
-
-button {
-  border-radius: 8px;
-  border: 1px solid transparent;
-  padding: 0.6em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-button:hover {
-  border-color: #646cff;
-}
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-}
-
-@media (prefers-color-scheme: light) {
-  :root {
-    color: #213547;
-    background-color: #ffffff;
-  }
-  a:hover {
-    color: #747bff;
-  }
-  button {
-    background-color: #f9f9f9;
-  }
+.container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
 }
