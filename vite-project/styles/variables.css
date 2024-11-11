@@ -1,10 +1,11 @@
-:root{
-  --slate-blue:#2a475e;
-  --midnight-blue:#1b2838;
-  --steam-black:#171a21;
-  --light-grey:#D3D3D3;
-  --epic-black:#2F2D2E;
-  --white:	#FFFFFF;
+/* variables.css */
+:root {
+  --slate-blue: #2a475e;
+  --midnight-blue: #1b2838;
+  --steam-black: #171a21;
+  --light-grey: #d3d3d3;
+  --epic-black: #2f2d2e;
+  --white: #ffffff;
 
   --primary: var(--steam-black);
   --secondary: var(--midnight-blue);

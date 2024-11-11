@@ -1,4 +1,6 @@
-@import url(variables.css);
+/* style.css */
+@import url('variables.css');
+
 html,
 body,
 * {
@@ -7,52 +9,64 @@ body,
   box-sizing: border-box;
   font-size: 62.5%;
 }
-.site{
-  background-color:var(--primary);
+
+.site {
+  background-color: var(--primary);
   text-align: center;
-  color:var(--slate-blue);
+  color: var(--slate-blue);
 }
+
 h1 {
   font-size: var(--h1);
 }
-body{
-  background-color:var(--secondary);
+
+body {
+  background-color: var(--secondary);
 }
-#steam{
+
+#steam {
   --primary: var(--steam-black);
   --secondary: var(--midnight-blue);
 }
-#epicgames{
+
+#epicgames {
   --primary: var(--epic-black);
   --secondary: var(--white);
 }
-.game{
-  display: block;
-  border: 1px solid #ccc;
-  padding: 10px;
-  margin: 10px;
-  width: 35rem;
-  height: 50rem;
-  text-align: center;
-  background-color:var(--steam-black);
-  color:var(--light-grey);
-  font-size: 3rem;
-}
-.container{
+
+.container {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   margin-top: 20px;
 }
-.game:hover{
-  transform: scale(1.1); /* incase any new images don't have hover effects, otherwise id overrides*/
-  transition: .4s ease-in-out;
+
+.card {
+  display: block;
+  border: 1px solid #ccc;
+  padding: 10px;
+  margin: 10px;
+  width: 200px;
+  text-align: center;
+  background-color: var(--steam-black);
+  color: var(--light-grey);
+  font-size: 1.5rem;
 }
-.btn{
-  padding: 3rem;
+
+.card:hover {
+  transform: scale(1.1);
+  transition: 0.4s ease-in-out;
+}
+
+.btn {
+  padding: 1rem 2rem;
   margin: 2rem;
-  font-size: 15px;
+  font-size: 1.5rem;
 }
-#marketplace{
-  background-color:var(--primary);
+
+.filter-buttons button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1.2rem;
+  cursor: pointer;
 }
