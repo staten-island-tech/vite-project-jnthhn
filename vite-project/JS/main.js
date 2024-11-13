@@ -1,25 +1,40 @@
-// main.js
-import { products } from "./product.js"; // Importing the product data
+import { products } from "./product.js";
 
 const DOMSelectors = {
   container: document.querySelector(".container"),
   toggleButton: document.querySelector(".btn"),
-  filterButtons: document.querySelector(".filter-buttons"),
+  filterButtons: document.querySelectorAll(".filter-buttons button"),
 };
 
-// Theme toggle logic
 DOMSelectors.toggleButton.addEventListener("click", function () {
   document.body.classList.toggle("steam");
   document.body.classList.toggle("epicgames");
+
+  // Set CSS variables based on the theme
+  if (document.body.classList.contains("epicgames")) {
+    document.documentElement.style.setProperty(
+      "--primary",
+      "var(--epic-black)"
+    );
+    document.documentElement.style.setProperty("--secondary", "var(--white)");
+  } else {
+    document.documentElement.style.setProperty(
+      "--primary",
+      "var(--steam-black)"
+    );
+    document.documentElement.style.setProperty(
+      "--secondary",
+      "var(--midnight-blue)"
+    );
+  }
 });
 
-// Function to create a card for each product
 function addCard(product) {
   const cardHTML = `
     <div class="card">
       <h4>${product.name}</h4>
       <p>Genre: ${product.genre}</p>
-      <p>Price: $${product.price.toFixed(2)}</p>
+      <p>Price: $${product.price}</p>
       <p>Publisher: ${product.publisher}</p>
       <p>Release Date: ${product.releaseDate}</p>
       <p>${product.sale ? "On Sale!" : ""}</p>
@@ -36,40 +51,25 @@ function displayProducts(productList) {
 // Initial display of all products
 displayProducts(products);
 
-// Function to add filter buttons for genres and sale status
-function addFilterButtons() {
-  const genres = [...new Set(products.map((product) => product.genre))]; // Unique genres
-  genres.forEach((genre) => {
-    const button = document.createElement("button");
-    button.textContent = genre;
-    button.addEventListener("click", function () {
-      filterProductsByGenre(genre);
-    });
-    DOMSelectors.filterButtons.appendChild(button);
+// Event listeners for each filter button
+DOMSelectors.filterButtons.forEach((button) => {
+  button.addEventListener("click", () => {
+    const filter = button.getAttribute("data-filter");
+    filterProducts(filter);
   });
+});
 
-  // Sale filter button
-  const saleButton = document.createElement("button");
-  saleButton.textContent = "On Sale";
-  saleButton.addEventListener("click", function () {
-    filterProductsBySale();
-  });
-  DOMSelectors.filterButtons.appendChild(saleButton);
-}
+// Function to filter products based on genre or sale status
+function filterProducts(filter) {
+  let filteredProducts;
 
-// Filter products by genre and display them
-function filterProductsByGenre(genre) {
-  const filteredProducts = products.filter(
-    (product) => product.genre === genre
-  );
+  if (filter === "All") {
+    filteredProducts = products; // Show all products
+  } else if (filter === "On Sale") {
+    filteredProducts = products.filter((product) => product.sale);
+  } else {
+    filteredProducts = products.filter((product) => product.genre === filter);
+  }
+
   displayProducts(filteredProducts);
 }
-
-// Filter products by sale status and display them
-function filterProductsBySale() {
-  const filteredProducts = products.filter((product) => product.sale === true);
-  displayProducts(filteredProducts);
-}
-
-// Add filter buttons for genres and sale status
-addFilterButtons();

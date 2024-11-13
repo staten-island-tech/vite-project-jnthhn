@@ -1,4 +1,3 @@
-/* style.css */
 @import url('variables.css');
 
 html,
@@ -24,14 +23,31 @@ body {
   background-color: var(--secondary);
 }
 
-#steam {
+/* Steam Theme */
+.steam {
   --primary: var(--steam-black);
   --secondary: var(--midnight-blue);
 }
 
-#epicgames {
+/* Epic Games Theme */
+.epicgames {
   --primary: var(--epic-black);
   --secondary: var(--white);
+}
+
+.epicgames .site {
+  color: var(--white); /* Set marketplace text to white in Epic Games theme */
+}
+
+.epicgames .card {
+  background-color: var(--white); /* Set card background to white */
+  color: var(--epic-black); /* Set card text to black */
+}
+
+
+.steam .card {
+  background-color: var(--steam-black); /* Set card background to black in Steam theme */
+  color: var(--white); /* Set card text to light grey */
 }
 
 .container {
@@ -44,13 +60,11 @@ body {
 .card {
   display: block;
   border: 1px solid #ccc;
-  padding: 10px;
+  padding: 100px;
   margin: 10px;
-  width: 200px;
+  width: 400px;
   text-align: center;
-  background-color: var(--steam-black);
-  color: var(--light-grey);
-  font-size: 1.5rem;
+  font-size: 4rem;
 }
 
 .card:hover {
@@ -68,5 +82,4 @@ body {
   margin: 0.5rem;
   padding: 0.5rem 1rem;
   font-size: 1.2rem;
-  cursor: pointer;
 }
