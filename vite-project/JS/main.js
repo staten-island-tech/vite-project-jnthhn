@@ -3,32 +3,21 @@ import { products } from "./product.js";
 const DOMSelectors = {
   container: document.querySelector(".container"),
   toggleButton: document.querySelector(".btn"),
-  filterButtons: document.querySelectorAll(".filter-buttons button"),
+  filterButtons: document.querySelectorAll(".filter-buttons"),
 };
 
+// Theme toggle logic
 DOMSelectors.toggleButton.addEventListener("click", function () {
-  document.body.classList.toggle("steam");
-  document.body.classList.toggle("epicgames");
-
-  // Set CSS variables based on the theme
-  if (document.body.classList.contains("epicgames")) {
-    document.documentElement.style.setProperty(
-      "--primary",
-      "var(--epic-black)"
-    );
-    document.documentElement.style.setProperty("--secondary", "var(--white)");
+  if (document.body.classList.contains("steam")) {
+    document.body.classList.add("epicgames");
+    document.body.classList.remove("steam");
   } else {
-    document.documentElement.style.setProperty(
-      "--primary",
-      "var(--steam-black)"
-    );
-    document.documentElement.style.setProperty(
-      "--secondary",
-      "var(--midnight-blue)"
-    );
+    document.body.classList.add("steam");
+    document.body.classList.remove("epicgames");
   }
 });
 
+// Function to add a card for each product
 function addCard(product) {
   const cardHTML = `
     <div class="card">
@@ -54,7 +43,7 @@ displayProducts(products);
 // Event listeners for each filter button
 DOMSelectors.filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    const filter = button.getAttribute("data-filter");
+    const filter = button.id; // Use button's ID as filter
     filterProducts(filter);
   });
 });
