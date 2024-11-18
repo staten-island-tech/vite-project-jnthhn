@@ -23,31 +23,31 @@ body {
   background-color: var(--secondary);
 }
 
-/* Steam Theme */
+
 .steam {
   --primary: var(--steam-black);
   --secondary: var(--midnight-blue);
 }
 
-/* Epic Games Theme */
+
 .epicgames {
   --primary: var(--epic-black);
   --secondary: var(--white);
 }
 
 .epicgames .site {
-  color: var(--white); /* Set marketplace text to white in Epic Games theme */
+  color: var(--white); 
 }
 
 .epicgames .card {
-  background-color: var(--white); /* Set card background to white */
-  color: var(--epic-black); /* Set card text to black */
+  background-color: var(--epic-black); 
+  color: var(--white); 
 }
 
 
 .steam .card {
-  background-color: var(--steam-black); /* Set card background to black in Steam theme */
-  color: var(--white); /* Set card text to light grey */
+  background-color: var(--steam-black); 
+  color: var(--white); 
 }
 
 .container {
@@ -65,6 +65,15 @@ body {
   width: 400px;
   text-align: center;
   font-size: 4rem;
+}
+
+.card img {
+  width: 100%; 
+  height: auto; 
+  max-width: 100%; 
+  max-height: 300px;
+  object-fit: cover; 
+  margin-bottom: 1rem; 
 }
 
 .card:hover {

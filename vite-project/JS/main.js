@@ -3,10 +3,10 @@ import { products } from "./product.js";
 const DOMSelectors = {
   container: document.querySelector(".container"),
   toggleButton: document.querySelector(".btn"),
-  filterButtons: document.querySelectorAll(".filter-buttons"),
+  filterButtons: document.querySelectorAll(".filter-buttons button"),
 };
 
-// Theme toggle logic
+// Theme toggle
 DOMSelectors.toggleButton.addEventListener("click", function () {
   if (document.body.classList.contains("steam")) {
     document.body.classList.add("epicgames");
@@ -22,6 +22,7 @@ function addCard(product) {
   const cardHTML = `
     <div class="card">
       <h4>${product.name}</h4>
+      <img src="${product.image}" alt="${product.name}"></img>
       <p>Genre: ${product.genre}</p>
       <p>Price: $${product.price}</p>
       <p>Publisher: ${product.publisher}</p>
