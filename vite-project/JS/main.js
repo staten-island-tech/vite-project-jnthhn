@@ -1,5 +1,5 @@
 import { products } from "./product.js";
-import "../styles/style.css";
+import "./styles/style.css";
 const DOMSelectors = {
   container: document.querySelector(".container"),
   toggleButton: document.querySelector(".btn"),
