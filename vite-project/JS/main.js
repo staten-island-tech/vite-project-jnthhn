@@ -3,7 +3,7 @@ import { products } from "./product.js";
 const DOMSelectors = {
   container: document.querySelector(".container"),
   toggleButton: document.querySelector(".btn"),
-  filterButtons: document.querySelectorAll(".filter-buttons"),
+  filterButtons: document.querySelectorAll(".filter-buttons button"),
 };
 
 DOMSelectors.toggleButton.addEventListener("click", function () {
@@ -21,6 +21,7 @@ function addCard(product) {
   const cardHTML = `
     <div class="card">
       <h4>${product.name}</h4>
+      <img src="${product.image}" alt="${product.name}"></img>
       <p>Genre: ${product.genre}</p>
       <p>Price: $${product.price}</p>
       <p>Publisher: ${product.publisher}</p>

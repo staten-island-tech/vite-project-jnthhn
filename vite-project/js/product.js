@@ -1,6 +1,7 @@
 export const products = [
   {
     name: "The Witcher 3: Wild Hunt",
+    image: "images/witcher.png",
     genre: "RPG",
     price: 39.99,
     releaseDate: "2015-05-18",
@@ -9,6 +10,7 @@ export const products = [
   },
   {
     name: "Cyberpunk 2077",
+    image: "images/cyberpunk.png",
     genre: "RPG",
     price: 59.99,
     releaseDate: "2020-12-10",
@@ -17,6 +19,7 @@ export const products = [
   },
   {
     name: "Hades",
+    image: "images/hades.png",
     genre: "Rogue-like",
     price: 24.99,
     releaseDate: "2020-09-17",
@@ -25,6 +28,7 @@ export const products = [
   },
   {
     name: "Stardew Valley",
+    image: "images/stardew.png",
     genre: "Simulation",
     price: 14.99,
     releaseDate: "2016-02-26",
@@ -33,6 +37,7 @@ export const products = [
   },
   {
     name: "DOOM Eternal",
+    image: "images/doom.png",
     genre: "FPS",
     price: 59.99,
     releaseDate: "2020-03-20",
@@ -41,6 +46,7 @@ export const products = [
   },
   {
     name: "Celeste",
+    image: "images/celeste.png",
     genre: "Platformer",
     price: 19.99,
     releaseDate: "2018-01-25",
@@ -49,6 +55,7 @@ export const products = [
   },
   {
     name: "Hollow Knight",
+    image: "images/hollowknight.png",
     genre: "Metroidvania",
     price: 14.99,
     releaseDate: "2017-02-24",
@@ -57,6 +64,7 @@ export const products = [
   },
   {
     name: "Among Us",
+    image: "images/amongus.png",
     genre: "Party",
     price: 4.99,
     releaseDate: "2018-06-15",
@@ -65,6 +73,7 @@ export const products = [
   },
   {
     name: "Red Dead Redemption 2",
+    image: "images/rdr2.png",
     genre: "Action-Adventure",
     price: 59.99,
     releaseDate: "2018-10-26",
@@ -73,6 +82,7 @@ export const products = [
   },
   {
     name: "Minecraft",
+    image: "images/minecraft.png",
     genre: "Sandbox",
     price: 26.95,
     releaseDate: "2011-11-18",
@@ -81,6 +91,7 @@ export const products = [
   },
   {
     name: "The Legend of Zelda: Breath of the Wild",
+    image: "images/zelda.png",
     genre: "Adventure",
     price: 59.99,
     releaseDate: "2017-03-03",
@@ -89,6 +100,7 @@ export const products = [
   },
   {
     name: "Animal Crossing: New Horizons",
+    image: "images/animalcrossing.png",
     genre: "Simulation",
     price: 59.99,
     releaseDate: "2020-03-20",
@@ -97,6 +109,7 @@ export const products = [
   },
   {
     name: "Final Fantasy VII Remake",
+    image: "images/finalfantasy.png",
     genre: "RPG",
     price: 69.99,
     releaseDate: "2020-04-10",
@@ -105,6 +118,7 @@ export const products = [
   },
   {
     name: "Dark Souls III",
+    image: "images/darksouls.png",
     genre: "Action RPG",
     price: 59.99,
     releaseDate: "2016-03-24",
@@ -113,6 +127,7 @@ export const products = [
   },
   {
     name: "Fortnite",
+    image: "images/fortnite.png",
     genre: "Battle Royale",
     price: 0.0,
     releaseDate: "2017-07-21",
@@ -121,6 +136,7 @@ export const products = [
   },
   {
     name: "Call of Duty: Modern Warfare",
+    image: "images/cod.png",
     genre: "FPS",
     price: 59.99,
     releaseDate: "2019-10-25",
@@ -129,6 +145,7 @@ export const products = [
   },
   {
     name: "Ghost of Tsushima",
+    image: "images/ghost.png",
     genre: "Action-Adventure",
     price: 59.99,
     releaseDate: "2020-07-17",
@@ -137,6 +154,7 @@ export const products = [
   },
   {
     name: "Rocket League",
+    image: "images/rocketleague.png",
     genre: "Sports",
     price: 0.0,
     releaseDate: "2015-07-07",
@@ -145,6 +163,7 @@ export const products = [
   },
   {
     name: "Apex Legends",
+    image: "images/apex.png",
     genre: "Battle Royale",
     price: 0.0,
     releaseDate: "2019-02-04",
@@ -153,6 +172,7 @@ export const products = [
   },
   {
     name: "Persona 5 Royal",
+    image: "images/persona.png",
     genre: "RPG",
     price: 59.99,
     releaseDate: "2020-03-31",
