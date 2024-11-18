@@ -6,7 +6,6 @@ const DOMSelectors = {
   filterButtons: document.querySelectorAll(".filter-buttons"),
 };
 
-// Theme toggle logic
 DOMSelectors.toggleButton.addEventListener("click", function () {
   if (document.body.classList.contains("steam")) {
     document.body.classList.add("epicgames");
