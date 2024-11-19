@@ -1,5 +1,5 @@
 import { products } from "./product.js";
-import "../styles/style.css";
+import "../css/style.css";
 
 const DOMSelectors = {
   container: document.querySelector(".container"),
