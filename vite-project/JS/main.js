@@ -17,7 +17,6 @@ DOMSelectors.toggleButton.addEventListener("click", function () {
   }
 });
 
-// Function to add a card for each product
 function addCard(product) {
   const cardHTML = `
     <div class="card">
@@ -32,29 +31,25 @@ function addCard(product) {
   DOMSelectors.container.insertAdjacentHTML("beforeend", cardHTML);
 }
 
-// Display all products
 function displayProducts(productList) {
-  DOMSelectors.container.innerHTML = ""; // Clear previous cards
-  productList.forEach((product) => addCard(product)); // Add each product as a card
+  DOMSelectors.container.innerHTML = "";
+  productList.forEach((product) => addCard(product));
 }
 
-// Initial display of all products
 displayProducts(products);
 
-// Event listeners for each filter button
 DOMSelectors.filterButtons.forEach((button) => {
   button.addEventListener("click", () => {
-    const filter = button.id; // Use button's ID as filter
+    const filter = button.id;
     filterProducts(filter);
   });
 });
 
-// Function to filter products based on genre or sale status
 function filterProducts(filter) {
   let filteredProducts;
 
   if (filter === "All") {
-    filteredProducts = products; // Show all products
+    filteredProducts = products;
   } else if (filter === "On Sale") {
     filteredProducts = products.filter((product) => product.sale);
   } else {
